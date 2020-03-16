@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1ab53494-e413-40f6-a078-9933b0a62749" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1YIPYpjtAp3YVTEhB1ieEgT4Qga" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings module-name="catalog" is-module-sdk="true" working-directory="$PROJECT_DIR$/..">
+        <option name="myUseModuleSdk" value="true" />
+        <option name="myModuleName" value="catalog" />
+        <option name="myWorkingDirectory" value="$PROJECT_DIR$/.." />
+      </console-settings>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1ab53494-e413-40f6-a078-9933b0a62749" name="Default Changelist" comment="" />
+      <created>1582627186297</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1582627186297</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="672" y="296" width="515" height="581" key="EnvironmentVariablesDialog" timestamp="1582627523583">
+      <screen x="62" y="27" width="1858" height="1053" />
+    </state>
+    <state x="672" y="296" width="515" height="581" key="EnvironmentVariablesDialog/62.27.1858.1053@62.27.1858.1053" timestamp="1582627523583" />
+    <state x="713" y="283" width="495" height="498" key="FileChooserDialogImpl" timestamp="1582627968816">
+      <screen x="62" y="27" width="1858" height="1053" />
+    </state>
+    <state x="713" y="283" width="495" height="498" key="FileChooserDialogImpl/62.27.1858.1053@62.27.1858.1053" timestamp="1582627968816" />
+    <state x="558" y="179" width="1022" height="737" key="SettingsEditor" timestamp="1582627971245">
+      <screen x="62" y="27" width="1858" height="1053" />
+    </state>
+    <state x="558" y="179" width="1022" height="737" key="SettingsEditor/62.27.1858.1053@62.27.1858.1053" timestamp="1582627971245" />
+    <state x="590" y="407" key="com.intellij.ide.util.TipDialog" timestamp="1582713469333">
+      <screen x="62" y="27" width="1858" height="1053" />
+    </state>
+    <state x="590" y="407" key="com.intellij.ide.util.TipDialog/62.27.1858.1053@62.27.1858.1053" timestamp="1582713469333" />
+  </component>
+</project>

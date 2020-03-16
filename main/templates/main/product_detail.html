@@ -1,0 +1,99 @@
+{% extends "layout/basic.html" %}
+
+{% load static %}
+
+{% block title %}
+{% if category %}{{ category.title }}{% else %}Products{% endif %}
+{% endblock %}
+
+{% block content %}
+<div class="section">
+<div class="container">
+    <div class="row">
+        <div class="col-main col-md-12">
+    <nav aria-label="breadcrumb" role="navigation">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Главная</a></li>
+            <li class="breadcrumb-item"><a href="#">{{ product.category.super_category.name }}</a></li>
+            <li class="breadcrumb-item"><a href="#">{{ product.category.name }}</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{{ product.name }}</li>
+        </ol>
+    </nav>
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+    <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'img/no_image.png' %}{% endif %}">
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+    <h1>{{ product.name }}</h1>
+    <h4><a href="{{ product.category.get_absolute_url }}">{{ product.category }}</a></h4>
+    <p class="price">${{ product.price }}</p>
+    <form action="{% url 'cart:cart_add' product.id %}" method="post">
+    {{ cart_product_form }}
+    {% csrf_token %}
+    <input type="submit" value="Add to cart">
+    </form>
+                </div>
+            </div>
+            <div class="card card-nav-tabs card-plain">
+                <div class="card-header card-header-danger">
+                    <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
+                    <div class="nav-tabs-navigation">
+                        <div class="nav-tabs-wrapper">
+                            <ul class="nav nav-tabs" data-tabs="tabs">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#home" data-toggle="tab">Описание</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#updates" data-toggle="tab">Дополнительная информация</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div><div class="card-body ">
+                <div class="tab-content">
+                    <div class="tab-pane active" id="home">
+                        <p>{{ product.description|linebreaks }}</p>
+                    </div>
+                    <div class="tab-pane" id="updates">
+                        <p> I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that&#x2019;s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. I think that&#x2019;s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. </p>
+                    </div>
+                </div>
+            </div>
+                {% if extra %}
+                <div class="col-main col-md-12">
+                    <h2>Обратите внимание:</h2>
+                </div>
+<div class="row">
+                {% for product in extra %}
+                <div class="col-12 col-md-4 col-lg-3">
+                    <div class="blog-card blog-card-blog">
+                        <div class="blog-card-image">
+                            <a href="#"> <img class="img" src="http://placehold.it/800x600/f44242/fff"> </a>
+                            <div class="ripple-cont"></div>
+                        </div>
+                        <div class="blog-table">
+                            <h6 class="card-category text-info">{{ product.category }}</h6>
+                            <h4 class="text-center">
+                                {{ product.name }}
+                            </h4>
+                            <p class="text-center">{{ product.price }} руб.</p>
+                            <div class="ftr text-center">
+                                <button class="btn btn-fistashka btn-icon btn-round" data-toggle="tooltip" data-placement="top" title="Добавить в корзину">
+                                    <i class="now-ui-icons shopping_cart-simple"></i>
+                                </button>
+                                <a class="btn btn-fistashka btn-icon btn-round" href="{{ product.get_absolute_url }}" data-toggle="tooltip" data-placement="top" title="Подробнее">
+                                    <i class="now-ui-icons text_align-left"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+</div>
+                {% endif %}
+            </div>
+    </div>
+</div>
+</div>
+</div>
+{% endblock %}
